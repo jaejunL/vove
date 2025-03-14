@@ -1,0 +1,15 @@
+{
+  "model": {
+      "in_channels": 80,
+      "out_channels":192,
+      "num_classes":44,
+      "channels": 512,
+      "prekernels": 5,
+      "scale": 8,
+      "kernels": 3,
+      "dilations": [2, 3, 4],
+      "bottleneck": 128,
+      "hiddens": 1536
+  }
+}
+  
