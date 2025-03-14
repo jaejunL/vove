@@ -25,7 +25,8 @@ python predict.py --ckpt_dir=ckpt/vove.pth --sample_dir=sample/vctk_female1_p276
 ```
 
 # Voice attributes
-You can check 44 voice attributes (which is dimension of output of our vove model) by checking `model.attributes`, please check `predict.py` or our demo file.
+You can check the 44 voice attributes (which represent the dimensions of the Vo-Ve model's output) by accessing `model.attributes`.\
+For details, please refer to `predict.py` or our demo file.
 ```
 ['adult-like', 'bright', 'calm', 'clear', 'cool', 'cute', 'dark', 'elegant', 'feminine', 'fluent', 'friendly', 'gender-neutral', 'halting', 'hard', 'intellectual', 'intense', 'kind', 'light', 'lively', 'masculine', 'mature', 'middle-aged', 'modest', 'muffled', 'nasal', 'old', 'powerful', 'raspy', 'reassuring', 'refreshing', 'relaxed', 'sexy', 'sharp', 'sincere', 'soft', 'strict', 'sweet', 'tensed', 'thick', 'thin', 'unique', 'weak', 'wild', 'young']
 ```
