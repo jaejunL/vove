@@ -1,5 +1,6 @@
 import os
 import json
+import argparse
 import torch
 from models.vove_ecapa import Vove_Ecapa
 from utils import HParams, load_checkpoint, load_filepaths_and_text, load_wav_to_torch
@@ -30,11 +31,11 @@ if __name__ == "__main__":
     args.base_args = base_args
 
     ckpt_path = args.base_args.ckpt_dir
-    args.base_args.device = 'cuda:0' if 'cuda' in base_args.device else 'cpu'
+    args.base_args.device = 'cuda:0' if 'cuda' in base_args.device or 'gpu' in base_args.device else 'cpu'
 
     vove = Vove_Ecapa(**args.model)
     vove, _, _, _ = load_checkpoint(ckpt_path, vove, None)
-    vove = vove.to(device)
+    vove = vove.to(args.base_args.device)
     vove = vove.eval()
 
     # Inference
@@ -43,7 +44,7 @@ if __name__ == "__main__":
     audio_norm = audio_norm.unsqueeze(0)
 
     with torch.no_grad():
-        pred, _ = vove(audio_norm.to(device))
+        pred = vove.predict(audio_norm.to(args.base_args.device))
 
     attribute_dict = {}
     for idx, attribute in enumerate(vove.attributes):
@@ -51,4 +52,4 @@ if __name__ == "__main__":
     print(sorted(attribute_dict.items(), key=lambda x: x[1], reverse=True))
     print(f"Prediction complted")
     
-# CUDA_VISIBLE_DEVICES=0 python inference/inference.py
+# CUDA_VISIBLE_DEVICES=0 python predict.py --ckpt_dir=ckpt/vove.pth --sample_dir=sample/vctk_female1_p276_002.wav --device=cuda
