@@ -9,7 +9,7 @@ The released version follows the same training strategy described in our paper.
 # Inference
 1. To perform inference:\
 Save the model weights (`vove.pth`) in the `ckpt` folder.\
-Model weights can be downloaded from our Google Drive: [link](https://drive.google.com/drive/folders/17JXnrx2UUoZUg7LrOCeP8XZqTFkh7fXD?usp=sharing).
+Model weights can be downloaded from our Google Drive: [link](https://drive.google.com/drive/folders/1AIDdJ1WQ2LkOzC1zRSwp-gGeob1gLu-9?usp=sharing).
 
 2. Prepare input audio:\
 Sample audio files from the VCTK dataset are available in the `sample` folder.
