@@ -1,8 +1,7 @@
 # Vo-Ve: An Explainable Voice-Vector for Speaker Identity Evaluation
 This repository contains the official implementation of our paper accepted to Interspeech 2025.
 
-> **Note (25.07.01)**: The code has now been released! If you have any questions or encounter any issues while running it, feel free to contact us.
-The released version follows the same training strategy described in our paper.
+> **Note (25.07.01)**: The code has now been released! If you have any questions or encounter any issues while running it, feel free to contact us. The released version follows the same training strategy described in our paper.\
 > **Note (25.08.12)**: We have released an additional model (`vove_realworld.pth`) trained with noise and reverberation augmentation for improved robustness on out-of-domain data.
 
 # Inference
