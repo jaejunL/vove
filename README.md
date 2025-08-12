@@ -10,9 +10,9 @@ Save the desired model weights (`vove.pth` or `vove_realworld.pth`) in the ckpt 
 Model weights are available here: [link](https://drive.google.com/drive/folders/1AIDdJ1WQ2LkOzC1zRSwp-gGeob1gLu-9?usp=sharing).
 
 2. Available models:
-  + `vove.pth` – The original model identical to the one described in our paper. Recommended for sanity checks and experiments on in-domain data (LibriTTS-P).
+  * `vove.pth` – The original model identical to the one described in our paper. Recommended for sanity checks and experiments on in-domain data (LibriTTS-P).
   
-  + `vove_realworld.pth` – Trained with noise and reverberation augmentation (DNS-Challenge dataset). Recommended for use with out-of-domain or real-world data.
+  * `vove_realworld.pth` – Trained with noise and reverberation augmentation (DNS-Challenge dataset). Recommended for use with out-of-domain or real-world data.
 
 3. Prepare input audio:\
 Sample audio files from the VCTK dataset are available in the `sample` folder.
