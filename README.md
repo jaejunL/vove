@@ -12,7 +12,7 @@ Model weights are available here: [link](https://drive.google.com/drive/folders/
 2. Available models:
   + `vove.pth` – The original model identical to the one described in our paper. Recommended for sanity checks and experiments on in-domain data (LibriTTS-P).
   
-  + vove_realworld.pth – Trained with noise and reverberation augmentation (DNS-Challenge dataset). Recommended for use with out-of-domain or real-world data.
+  + `vove_realworld.pth` – Trained with noise and reverberation augmentation (DNS-Challenge dataset). Recommended for use with out-of-domain or real-world data.
 
 3. Prepare input audio:\
 Sample audio files from the VCTK dataset are available in the `sample` folder.
